@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font: sans-serif;
+  font-family: "Raleway", sans-serif;
+  box-sizing: cascadia code;
 }
 
 .box {
@@ -14,5 +16,93 @@
     ),
     url(images/backgroungImage.jpeg);
   background-size: cover;
-  color: white;
+  overflow-x: hidden;
+  position: relative;
 }
+
+/* Responsive Navbar CSS started !!  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(58, 58, 61);
+  align-items: center;
+  height: 40px;
+  /* display: none; */
+}
+.navbar .brand-name {
+  font-size: 0.7rem;
+  margin: 0.1rem;
+  color: rgb(243, 240, 234);
+  margin-left: 10px;
+  /* display: none; */
+}
+
+.navbar .navbar-links ul {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 10px;
+}
+.navbar .navbar-links ul li {
+  /* margin-left: 15px; */
+  list-style: none;
+  font-size: 16px;
+  padding: 10px 0px;
+  /* display: none; */
+  /* border: 1px solid black; */
+}
+
+.navbar .navbar-links ul li a {
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: rgb(243, 240, 234);
+  padding: 0rem 1rem;
+  /* margin: 0px; */
+  /* border: 1px solid black; */
+  padding-bottom: 0px;
+  text-decoration: none;
+  transition-duration: 0.8s;
+}
+.navbar .navbar-links ul li:hover {
+  background: #555;
+  /* text-decoration: underline; */
+  /* color: yellow; */
+  /* text-decoration: none; */
+  /* text-decoration: underline; */
+}
+
+.toggle-button {
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 20px;
+  display: none;
+  flex-direction: Column;
+  height: 18px;
+  /* margin: 2px; */
+  padding: 8.7px;
+  justify-content: space-between;
+  right: 1rem;
+
+  /* padding-left: 34.7rem; */
+}
+.toggle-button:hover {
+  background: #555;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 340px) {
+  .navbar .navbar-links ul {
+    /* flex-direction: column; */
+    display: none;
+  }
+  .toggle-button {
+    display: flex;
+  }
+}
+/* Responsive Navbar CSS ended !!  */
